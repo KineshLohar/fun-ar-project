@@ -1,6 +1,37 @@
 // src/HomePage.js
+import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+const socials = [
+  {
+    id : 1,
+    name : "Instagram",
+    icon : faInstagram,
+    link : "https://twitter.com/yourusername"
+  },
+  {
+    id : 2,
+    name : "LinkedIn",
+    icon : faLinkedin,
+    link : "https://twitter.com/yourusername"
+  },
+  {
+    id : 3,
+    name : "Github",
+    icon : faGithub,
+    link : "https://twitter.com/yourusername"
+  }, 
+  {
+    id : 4,
+    name : "Website",
+    icon : faGlobe,
+    link : "https://twitter.com/yourusername"
+  },
+  
+]
 
 const HomePage = () => {
   return (
@@ -9,46 +40,31 @@ const HomePage = () => {
       <p className="text-lg mb-8 text-center">
         This is a fun project demonstrating augmented reality with face tracking. Explore the features and enjoy the experience!
       </p>
-      <Link to="/scene">
+      <p className="text-lg mb-8 text-center font-semibold">Created by Kinesh Lohar</p>
+      <NavLink to="/scene">
         <button className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
           Start AR
         </button>
-      </Link>
+      </NavLink>
       <div className="mt-12 flex flex-col items-center">
         <p className="text-lg mb-2">Follow me on social media:</p>
         <div className="flex space-x-4">
-          <a
-            href="https://twitter.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:text-blue-600 transition"
-          >
-            Twitter
-          </a>
-          <a
-            href="https://github.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-900 hover:text-gray-700 transition"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://linkedin.com/in/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-700 hover:text-blue-800 transition"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://instagram.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-pink-500 hover:text-pink-600 transition"
-          >
-            Instagram
-          </a>
+          {
+            socials.map(social => {
+              return (
+                <NavLink
+                  to={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={social.id}
+                  className="text-gray-900 hover:text-gray-700 transition"
+                >
+                  <FontAwesomeIcon icon={social.icon} size='2xl' />
+                </NavLink>
+              );
+            })
+          }
+         
         </div>
       </div>
     </div>
