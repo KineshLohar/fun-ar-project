@@ -10,25 +10,25 @@ const socials = [
     id : 1,
     name : "Instagram",
     icon : faInstagram,
-    link : "https://twitter.com/yourusername"
+    link : "hhttps://www.instagram.com/kinesh_malviya/"
   },
   {
     id : 2,
     name : "LinkedIn",
     icon : faLinkedin,
-    link : "https://twitter.com/yourusername"
+    link : "https://www.linkedin.com/in/kineshlohar/"
   },
   {
     id : 3,
     name : "Github",
     icon : faGithub,
-    link : "https://twitter.com/yourusername"
+    link : "https://github.com/KineshLohar"
   }, 
   {
     id : 4,
     name : "Website",
     icon : faGlobe,
-    link : "https://twitter.com/yourusername"
+    link : "https://kineshlohar.github.io/portfolio/"
   },
   
 ]
