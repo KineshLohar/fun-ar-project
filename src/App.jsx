@@ -5,10 +5,12 @@ import Home from './components/Home'
 import Scene from './components/Scene';
 import "aframe";
 import "mind-ar/dist/mindar-face-aframe.prod.js";
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
-   <BrowserRouter>
+    <>
+    <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/scene" element={<Scene />} />
@@ -16,6 +18,9 @@ function App() {
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
    </BrowserRouter>
+   <Analytics />
+    </>
+   
   );
 }
 
