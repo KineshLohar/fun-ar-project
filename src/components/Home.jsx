@@ -10,7 +10,7 @@ const socials = [
     id : 1,
     name : "Instagram",
     icon : faInstagram,
-    link : "hhttps://www.instagram.com/kinesh_malviya/"
+    link : "https://www.instagram.com/kinesh_malviya/"
   },
   {
     id : 2,
